@@ -2,7 +2,15 @@
 @import "variables";
 
 body {
-  background-color: #000;
+  background-color:  rgb(92, 49, 49);
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  .col {
+    width: 30%;
+    background-color: rgb(49, 4, 15);
+    min-height: 50px;
+  }
   h1 {
     color: $green;
     transition: color 1s;

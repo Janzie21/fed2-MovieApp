@@ -2,7 +2,7 @@ const btnRef = document.getElementById('btnGenre');
 const butRef = document.getElementById('btnTrending');
 const btnDataRef = document.getElementById('btnData');
 const listRef = document.getElementById('listGenre');
-const lijstRef= document.getElementById('listTrending');
+const lijstRef = document.getElementById('listTrending');
 const listMovieRef = document.getElementById('filmInfo')
 
 btnRef.addEventListener('click',function() {
@@ -21,7 +21,7 @@ butRef.addEventListener('click',function() {
           return response.json();
         })
         .then(function(data) {
-          lijstRef.innerHTML = data.people.map((person))`<li><img src="https://image.tmdb.org/t/p/w500/${person.poster_path}</li>`;
+          lijstRef.innerHTML = data.results.map((result)=>`<li><img src="https://image.tmdb.org/t/p/w500/${result.profile_path}"</li>`).join("")
         });
       });
 

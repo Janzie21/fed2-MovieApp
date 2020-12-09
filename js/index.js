@@ -14,6 +14,16 @@ btnRef.addEventListener('click',function() {
         listRef.innerHTML = data.genres.map((genre)=>`<li>${genre.name}</li>`).join("")
       });
     });
+  
+butRef.addEventListener('click',function() {
+    fetch(`https://api.themoviedb.org/3/trending/person/week?api_key=23de8fca6db455ca340aaec8144cf4a3`)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(data) {
+          lijstRef.innerHTML = data.people.map((person))`<li><img src="https://image.tmdb.org/t/p/w500/${person.poster_path}</li>`;
+        });
+      });
 
 
 btnDataRef.addEventListener('click',function() {
@@ -25,6 +35,7 @@ btnDataRef.addEventListener('click',function() {
   .then(function(data) {
     listMovieRef.innerHTML = `<h2>${data.original_title}</h2>
     <p><img src="https://image.tmdb.org/t/p/w500/${data.poster_path}"</p>
+    <p>${data.homepage}</p>
     <p>${data.overview}</p>
     `;
   })

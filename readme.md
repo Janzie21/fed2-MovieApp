@@ -15,3 +15,5 @@ Run this command to install dependencies and dev-dependencies
 ```bash
 npm install
 ```
+
+movieAppNJ.surge.sh
